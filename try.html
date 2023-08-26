@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try It Editor</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+        }
+        .editor, .output {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 5px;
+            height: 100vh;
+            overflow: auto;
+        }
+        .editor {
+            background-color: #f5f5f5;
+            border-right: 1px solid #ddd;
+        }
+        textarea {
+            width: 90%;
+            height: 70vh;
+            resize: vertical;
+            padding: 10px;
+        }
+        
+        
+        button {
+            display: block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            border: 1px solid black !important;
+            padding:0px!important;
+            
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: calc(100vh - 250px); /* Adjust as needed */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="editor">
+            <h2>Code Editor</h2>
+            <textarea id="codeInput" rows="10" placeholder="Enter HTML code here">
+
+              &lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Simple HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;This is a simple HTML page.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </textarea>
+            <button onclick="renderOutput()">Run</button>
+        </div>
+        <div class="output">
+          <iframe id="outputFrame" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function renderOutput() {
+            const code = document.getElementById("codeInput").value;
+            const outputFrame = document.getElementById("outputFrame");
+            const outputDocument = outputFrame.contentDocument || outputFrame.contentWindow.document;
+            outputDocument.open();
+            outputDocument.write(code);
+            outputDocument.close();
+        }
+    </script>
+</body>
+</html>
