@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,29 +8,75 @@
     <title>Learn HTML</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-/* Style the body */
 body {
   font-family: Arial;
   margin: 0;
 }
-
-/* Header/Logo Title */
 .header {
   padding: 60px;
   text-align: center;
-  background: #1abc9c;
+  background: #ff9933;
   color: white;
   font-size: 30px;
-}
+} 
 
-/* Page Content */
+.container {
+      width: 98%;
+      padding: 5px;
+      margin:auto; text-align: center;
+      max-width:800px;
+    }
+    
+    .editor {
+      background-color: #f7f7f7;
+      padding: 5px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+ box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    
+    button {display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff9933;
+      color: #fff;
+      border: none;
+      margin:10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;}
+
+    .codeInput {
+      width: 100%;
+      box-sizing: border-box; 
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px; 
+    }
+    
+    .output { 
+      background-color: #fff;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .outputFrame {
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+    
+    
 .content {padding:20px; border:2px solid black;}
 </style>
 </head>
 <body>
     <div class="header">
-  <h1>Learn HTML </h1>
-  <p>Welcome to Learn HTML</p>
+  <img src="https://cdn.jsdelivr.net/gh/Ajinkgupta/Learn-HTML@main/html-logo.png" width="100px"> 
+  <h1> HTML </h1>
+ 
 </div>
 
 <div class="content">
@@ -46,6 +93,84 @@ body {
 	<li><code>&lt;noscript&gt;</code>: Provides alternative content for users with disabled scripts.</li>
 	<li><code>&lt;base&gt;</code>: Specifies a base URL for relative URLs in the document.</li>
 </ul>
+
+
+<div class="container">
+        <div class="editor">
+            <h2>Code Editor</h2>
+            <textarea class="codeInput" rows="10" placeholder="Enter HTML code here">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Basic HTML Page</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>This is a brief description of our company.</p>
+        </section>
+        
+        <section>
+            <h2>Our Services</h2>
+            <ul>
+                <li>Service 1</li>
+                <li>Service 2</li>
+                <li>Service 3</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+            </textarea>
+            <button onclick="renderOutput(this)">Run</button>
+        </div>
+        <div class="output">
+            <iframe class="outputFrame" frameborder="0"></iframe>
+        </div>
+    </div>
+
+
+<br/>
+
+<div class="container">
+        <div class="editor">
+            <h2>Code Editor H1-H6</h2>
+            <textarea class="codeInput" rows="10" placeholder="Enter HTML code here">
+                <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+            </textarea>
+            <button onclick="renderOutput(this)">Run</button>
+        </div>
+        <div class="output">
+            <iframe class="outputFrame" frameborder="0"></iframe>
+        </div>
+    </div>
+    
+    <br/>
 
 <p><strong>Text Content:</strong></p>
 
@@ -70,6 +195,104 @@ body {
 	<li><code>&lt;dd&gt;</code>: Defines the description of a term in a description list.</li>
 </ul>
 
+
+<div class="container">
+        <div class="editor">
+            <h2>Code Editor: using all above tags</h2>
+            <textarea class="codeInput" rows="10" placeholder="Enter HTML code here">
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags Example</title>
+</head>
+<body>
+    <!-- <p>: Defines a paragraph. -->
+    <p>This is a paragraph of text. It's used to structure content into separate paragraphs.</p>
+    
+    <!-- <h1> to <h6>: Define headings of different levels. -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    
+    <!-- <strong>: Represents strong importance (bold). -->
+    <p>This is <strong>strongly emphasized</strong> text using the <strong>&lt;strong&gt;</strong> tag.</p>
+    
+    <!-- <em>: Represents emphasized text (italic). -->
+    <p>This is <em>emphasized</em> text using the <strong>&lt;em&gt;</strong> tag.</p>
+    
+    <!-- <u>: Underlines text. -->
+    <p>This is <u>underlined</u> text using the <strong>&lt;u&gt;</strong> tag.</p>
+    
+    <!-- <s>: Renders text with a strikethrough. -->
+    <p>This text has a <s>strikethrough</s> using the <strong>&lt;s&gt;</strong> tag.</p>
+    
+    <!-- <blockquote>: Defines a section that is a longer quote from another source. -->
+    <blockquote>
+        <p>This is a longer quote that's separated from the main content using the <strong>&lt;blockquote&gt;</strong> tag. It's often indented to distinguish it from the rest of the text.</p>
+    </blockquote>
+    
+    <!-- <q>: Defines a short inline quotation. -->
+    <p>He said, <q>This is a short quote</q> using the <strong>&lt;q&gt;</strong> tag.</p>
+    
+    <!-- <abbr>: Defines an abbreviation or acronym. -->
+    <p><abbr title="World Health Organization">WHO</abbr> is an example of an abbreviation defined with the <strong>&lt;abbr&gt;</strong> tag.</p>
+    
+    <!-- <code>: Represents computer code. -->
+    <p>This is an example of <code>inline code</code> using the <strong>&lt;code&gt;</strong> tag.</p>
+    
+    <!-- <pre>: Defines preformatted text, preserving both spaces and line breaks. -->
+    <pre>
+        This is a
+        preformatted
+        block of text.
+    </pre>
+    
+    <!-- <a>: Creates a hyperlink. -->
+    <p>Visit <a href="https://www.example.com">Example Website</a> for more information.</p>
+    
+    <!-- <ul>: Defines an unordered list. -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    
+    <!-- <ol>: Defines an ordered list. -->
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+    
+    <!-- <dl>: Defines a description list. -->
+    <dl>
+        <dt>Term 1</dt>
+        <dd>Description for Term 1</dd>
+        <dt>Term 2</dt>
+        <dd>Description for Term 2</dd>
+    </dl>
+</body>
+</html>
+
+            </textarea>
+            <button onclick="renderOutput(this)">Run</button>
+        </div>
+        <div class="output">
+            <iframe class="outputFrame" frameborder="0"></iframe>
+        </div>
+    </div>
+
+
+
+
+
+
+
 <p><strong>Multimedia:</strong></p>
 
 <ul>
@@ -78,6 +301,58 @@ body {
 	<li><code>&lt;video&gt;</code>: Embeds video content.</li>
 	<li><code>&lt;iframe&gt;</code>: Embeds an external webpage within the current page.</li>
 </ul>
+
+
+
+
+<div class="container">
+        <div class="editor">
+            <h2>Code Editor : using all above tags</h2>
+            <textarea class="codeInput" rows="10" placeholder="Enter HTML code here">
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media and Embedding Example</title>
+</head>
+<body>
+    <!-- <img>: Embeds an image. -->
+    <img src="html-logo.png" alt="Description of the image">
+    
+    <!-- <audio>: Embeds audio content. -->
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <br/>
+    
+    <!-- <video>: Embeds video content. -->
+    <video controls width="320" height="240">
+        <source src="short.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <br/>
+    
+    <!-- <iframe>: Embeds an external webpage within the current page. -->
+    <iframe src="https://html.ajinkgupta.me/try.html" width="800" height="600"></iframe>
+</body>
+</html>
+
+            </textarea>
+            <button onclick="renderOutput(this)">Run</button>
+        </div>
+        <div class="output">
+            <iframe class="outputFrame" frameborder="0"></iframe>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
 
 <p><strong>Forms and Input:</strong></p>
 
@@ -96,6 +371,114 @@ body {
 	<li><code>&lt;submit&gt;</code>: Creates a submit button.</li>
 </ul>
 
+
+<div class="container">
+        <div class="editor">
+            <h2>Code Editor : using all above tags</h2>
+            <textarea class="codeInput" rows="10" placeholder="Enter HTML code here">
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms and Input Example</title>
+</head>
+<body>
+    <!-- <form>: Creates an HTML form. -->
+    <form action="submit.php" method="post">
+        <!-- <label>: Defines a label for an input element. -->
+        <label for="name">Name:</label>
+        <!-- <input>: Creates an input field. -->
+        <input type="text" id="name" name="name" required>
+        
+        <!-- <label>: Defines a label for an input element. -->
+        <label for="email">Email:</label>
+        <!-- <input>: Creates an input field for email. -->
+        <input type="email" id="email" name="email" required>
+        
+        <!-- <label>: Defines a label for a textarea element. -->
+        <label for="message">Message:</label>
+        <!-- <textarea>: Creates a multiline text input. -->
+        <textarea id="message" name="message" rows="4" required> &lt;/textarea>
+        
+        <!-- <button>: Creates a clickable button. -->
+        <button type="submit">Submit</button>
+    </form>
+    
+    <!-- <select>: Creates a dropdown list. -->
+    <label for="gender">Select your gender:</label>
+    <select id="gender" name="gender">
+        <!-- <option>: Defines an option in a <select> element. -->
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+    
+    <!-- <fieldset>: Groups related elements in a form. -->
+    <fieldset>
+        <!-- <legend>: Defines a caption for a <fieldset> element. -->
+        <legend>Contact Preferences:</legend>
+        <!-- <radio>: Creates a radio button. -->
+        <label><input type="radio" name="contactPref" value="email"> Email</label>
+        <label><input type="radio" name="contactPref" value="phone"> Phone</label>
+        <!-- <checkbox>: Creates a checkbox. -->
+        <label><input type="checkbox" name="subscribe" value="yes"> Subscribe to newsletter</label>
+    </fieldset>
+</body>
+</html>
+
+            </textarea>
+            <button onclick="renderOutput(this)">Run</button>
+        </div>
+        <div class="output">
+            <iframe class="outputFrame" frameborder="0"></iframe>
+        </div>
+    </div>
+
+
+
+<p><strong>Line Break and Horizontal Rule:</strong></p>
+
+<ul>
+	<li><code>&lt;br&gt;</code>: Inserts a line break, primarily used within text content.</li>
+	<li><code>&lt;hr&gt;</code>: Represents a thematic break or horizontal rule in the content.</li>
+</ul>
+
+
+
+
+<div class="container">
+        <div class="editor">
+            <h2>Code Editor : using all above tags</h2>
+            <textarea class="codeInput" rows="10" placeholder="Enter HTML code here">
+               <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Break and Horizontal Rule Example</title>
+</head>
+<body>
+    <!-- <br>: Inserts a line break. -->
+    <p>This is the first line.<br>This is the second line.</p>
+    
+    <!-- <hr>: Represents a horizontal rule. -->
+    <p>This is some content above the horizontal rule.</p>
+    <hr>
+    <p>This is some content below the horizontal rule.</p>
+</body>
+</html>
+ 
+            </textarea>
+            <button onclick="renderOutput(this)">Run</button>
+        </div>
+        <div class="output">
+            <iframe class="outputFrame" frameborder="0"></iframe>
+        </div>
+    </div>
+    
+
+
 <p><strong>Semantic Elements:</strong></p>
 
 <ul>
@@ -111,20 +494,129 @@ body {
 	<li><code>&lt;mark&gt;</code>: Highlights text.</li>
 </ul>
 
-<p><strong>Line Break and Horizontal Rule:</strong></p>
 
-<ul>
-	<li><code>&lt;br&gt;</code>: Inserts a line break, primarily used within text content.</li>
-	<li><code>&lt;hr&gt;</code>: Represents a thematic break or horizontal rule in the content.</li>
-</ul>
+
+<div class="container">
+        <div class="editor">
+            <h2>Code Editor : using all above tags</h2>
+            <textarea class="codeInput" rows="10" placeholder="Enter HTML code here">
+               <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Elements Example</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header, nav, main, article, section, aside, footer {
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        
+        figure {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        figcaption {
+            font-style: italic;
+            color: #666;
+        }
+        
+        mark {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>This is a brief description of our company.</p>
+        </section>
+        
+        <section>
+            <h2>Our Services</h2>
+            <ul>
+                <li>Service 1</li>
+                <li>Service 2</li>
+                <li>Service 3</li>
+            </ul>
+        </section>
+        
+        <article>
+            <h2>Featured Article</h2>
+            <p>This is a self-contained composition within the <code>&lt;article&gt;</code> tag.</p>
+        </article>
+    </main>
+    
+    <aside>
+        <h3>Related Links</h3>
+        <p>This is some content aside from the main content.</p>
+    </aside>
+    
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+    
+    <figure>
+        <img src="html-logo.png" alt="A beautiful image">
+        <figcaption>A captivating image with a meaningful caption.</figcaption>
+    </figure>
+    
+    <p>This is <mark>highlighted text</mark> using the <code>&lt;mark&gt;</code> tag.</p>
+</body>
+</html>
+ 
+            </textarea>
+            <button onclick="renderOutput(this)">Run</button>
+        </div>
+        <div class="output">
+            <iframe class="outputFrame" frameborder="0"></iframe>
+        </div>
+    </div>
 
 </div>
 
 <div classs = "footer" style="margin: auto; text-align: center;">
-<p>learn html</p>
+<p>Created with HTML</p>
 <img src="https://cdn.jsdelivr.net/gh/Ajinkgupta/Learn-HTML@main/html-logo.png" width="50px">
 </div>
 
+ <script>
+        function renderOutput(button) {
+            const container = button.parentElement.parentElement;
+            const codeInput = container.querySelector(".codeInput");
+            const outputFrame = container.querySelector(".outputFrame");
+            const code = codeInput.value;
+            const outputDocument = outputFrame.contentDocument || outputFrame.contentWindow.document;
+            outputDocument.open();
+            outputDocument.write(code);
+            outputDocument.close();
+        }
+    </script>
 
 </body>
 </html>
